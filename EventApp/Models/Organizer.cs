@@ -7,5 +7,11 @@ namespace EventApp.Models
 {
     public class Organizer
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string phoneNumber { get; set; }
+        public List<Event> Events { get; set; }
+
     }
 }
