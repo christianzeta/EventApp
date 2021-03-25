@@ -33,6 +33,10 @@ namespace EventApp.Data
                 .HasOne(bc => bc.Event)
                 .WithMany(c => c.AttendeeEvent)
                 .HasForeignKey(bc => bc.EventId);
+
+            modelBuilder.Entity<Organizer>()
+                .HasMany(c => c.Events)
+                .WithOne(e => e.Organizer);
         }
 
     }
