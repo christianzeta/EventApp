@@ -18,13 +18,13 @@
 @if (Model.req == "get")
 {
     <form method="post">
-        <input type="submit" value="Join Event" asp-route-id="@Model.Event.ID"/>
+        <input type="submit" value="Join Event" asp-route-id="@Model.Event.ID" class="btn btn-secondary"/>
     </form>
 }
 
 @if (Model.req == "post")
 {
     <h2>Successfully joined @Model.Event.Title! See you there!</h2>
-    <a asp-page="/Events">View more events</a>
-    <a asp-page="/MyEvents">View your events</a>
+    <a asp-page="/Events" class="btn btn-secondary">View more events</a>
+    <a asp-page="/MyEvents" class="btn btn-secondary">View your events</a>
 }

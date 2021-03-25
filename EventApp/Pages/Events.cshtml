@@ -53,9 +53,10 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                <a asp-page="./JoinEvent" asp-route-id="@item.ID">Join Event</a> |
+                <a asp-page="./JoinEvent" asp-route-id="@item.ID" class="btn btn-info">Join Event</a> |
             </td>
         </tr>
 }
     </tbody>
 </table>
+
