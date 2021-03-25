@@ -10,7 +10,7 @@ namespace EventApp.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public List<Event> Events { get; set; }
 
     }

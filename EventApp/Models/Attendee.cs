@@ -11,6 +11,6 @@ namespace EventApp.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public List<Event> Events { get; set; }
+        public List<AttendeeEvent> AttendeeEvent { get; set; }
     }
 }
