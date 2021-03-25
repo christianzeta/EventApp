@@ -5,4 +5,26 @@
 }
 
 <h1>@Model.Event.Title.</h1>
-<p>@Model.Event.Organizer.Name</p>
+<p>Description: @Model.Event.Description</p>
+<p>Place: @Model.Event.Place</p>
+<p>Address: @Model.Event.Address</p>
+<p>Date: @Model.Event.Date</p>
+<p>Spots Available: @Model.Event.SpotsAvailable</p>
+<h2>Organizer Info</h2>
+<p>Name: @Model.Event.Organizer.Name</p>
+<p>Email: @Model.Event.Organizer.Email</p>
+<p>Phone: @Model.Event.Organizer.PhoneNumber</p>
+
+@if (Model.req == "get")
+{
+    <form method="post">
+        <input type="submit" value="Join Event" asp-route-id="@Model.Event.ID"/>
+    </form>
+}
+
+@if (Model.req == "post")
+{
+    <h2>Successfully joined @Model.Event.Title! See you there!</h2>
+    <a asp-page="/Events">View more events</a>
+    <a asp-page="/Events">View your events</a>
+}
