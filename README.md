@@ -1,6 +1,6 @@
 # ASP.NET CORE och dess användningsområde
 
-ASP.NET CORE är ett bibliotek för att skapa webbaplikationer med till exempel C# kod på server sidan som sedan kan köras på alla olika operativsystem.
+ASP.NET CORE är ett bibliotek för att skapa webbapplikationer med till exempel C# kod på server sidan som sedan kan köras på alla olika operativsystem.
 När ett projekt startas i ASP.NET CORE medföljer Startup.cs, Program.cs och wwwroot mappen. Sedan kan även Razor språket användas.
 När programmet startar så registreras de olika services som har tillämpats i Startup.cs, för Razor Pages används "services.addRazorPages". 
 Det är även här ett databaskontext läggs till oavsett om det är Razor Pages eller t.ex. MVC.  När en service läggs till används dependency injection som ser till att det 
