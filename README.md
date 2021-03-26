@@ -23,6 +23,7 @@ En Content Page definieras av @Page som står högst upp i filen och under står
 På denna sidan skrivs HTML kod som kommer att skickas till webbläsaren blandat med C# kod som först utväderas på serven. 
 Detta görs genom att skriva vanlig HTML och när C# används skrivs det antingen på en rad med hjälp av "@" först, eller i ett block genom "@{ kodblock }".  
 Här kan utvecklaren även använda data som hämtas / manipuleras i den tillhörande Model Page klassen genom att skriva "@Model.x.x".
+
 Model Page är en klass som tillhör en Content Page där logik hamnar samt t.ex. koppling till en databas. F
 rämst används det för att hantera olika request genom "OnGet(), OnPost()". Nä
 r en request kommer in till servern går den först igenom Model Page och genererar sedan Content Page som skickas tillbaka till användaren. 
