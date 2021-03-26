@@ -7,8 +7,10 @@ Det är även här ett databaskontext läggs till oavsett om det är Razor Pages
 skapas objekt som olika sidor enkelt kan få tag på. Efter services lagts till körs programmet Main i Program.cs där en Host skapas. 
 
 Sedan körs configure i Startup.cs som fungerar som en pipeline för olika http request, där en request går igenom stegen uppifrån och ned, och sedan tillbaka igen för att modifiera request och respons.
+
 Mappen wwwroot innehåller de statiska filer som servern kan skicka tillbaka till webbläsaren utan att modifiera de innan, de skickas precis som de är. 
 Dessa filer är CSS, javascript och bilder. CSS och Javascript kan dynamiskt förändra hur en hemsida ser ut och agerar, men allt det händer i webbläsaren till skillnad från i servern. En Razor Page omvandlas istället på servern för att representera värden av uttryck som sedan skickas till webbläsaren som en statisk html sida, och varje gång en request sker så görs något på server sidan som förändrar koden och skickar ett nytt svar. 
+
 Med Razor språket / syntaxen så är det möjligt att kombinera helt vanlig C# med HTML på samma sida. Genom att på detta sättet kombinera frontend med backend kommer fördelar och nackdelar beroende på ens utvecklingsstil. Genom att helt separera koden kan det bli enklare och tydligare att se vart man gjort fel och koden kan kännas mer enhetlig. Däremot känns det även mer intuitivt att direkt i HTML koden kunna generera dynamisk kod. 
 Utöver Razor språket får utvecklaren även tillgång till Tag Helpers från ASP.NET CORE som hjälper till att göra HTML koden mer dynamisk. 
 
