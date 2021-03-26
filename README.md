@@ -24,9 +24,7 @@ På denna sidan skrivs HTML kod som kommer att skickas till webbläsaren blandat
 Detta görs genom att skriva vanlig HTML och när C# används skrivs det antingen på en rad med hjälp av "@" först, eller i ett block genom "@{ kodblock }".  
 Här kan utvecklaren även använda data som hämtas / manipuleras i den tillhörande Model Page klassen genom att skriva "@Model.x.x".
 
-Model Page är en klass som tillhör en Content Page där logik hamnar samt t.ex. koppling till en databas. F
-rämst används det för att hantera olika request genom "OnGet(), OnPost()". Nä
-r en request kommer in till servern går den först igenom Model Page och genererar sedan Content Page som skickas tillbaka till användaren. 
+Model Page är en klass som tillhör en Content Page där logik hamnar samt t.ex. koppling till en databas. Främst används det för att hantera olika request genom "OnGet(), OnPost()". När en request kommer in till servern går den först igenom Model Page och genererar sedan Content Page som skickas tillbaka till användaren. 
 ModelPage blir alltså en kortlivad instans av en klass som bara finns under skeendet av en request. 
 
 # Vilka delar ingår i en MVC Applikation och hur de hänger ihop
