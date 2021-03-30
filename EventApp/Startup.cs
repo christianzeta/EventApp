@@ -1,7 +1,9 @@
 using EventApp.Data;
+using EventApp.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace EventApp
 {
@@ -28,6 +31,9 @@ namespace EventApp
             services.AddRazorPages();
             services.AddDbContext<EventContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("EventContext")));
+            services.AddDefaultIdentity<MyUser>()
+            .AddEntityFrameworkStores<EventContext>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +54,8 @@ namespace EventApp
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

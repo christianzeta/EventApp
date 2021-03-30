@@ -4,32 +4,28 @@
 @{
     ViewData["Title"] = "MyEvents";
 }
-
 <h1>My Events</h1>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.Title)
+                @Html.DisplayNameFor(model => model.Events[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.Description)
+                @Html.DisplayNameFor(model => model.Events[0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.Place)
+                @Html.DisplayNameFor(model => model.Events[0].Place)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.Address)
+                @Html.DisplayNameFor(model => model.Events[0].Address)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.SpotsAvailable)
+                @Html.DisplayNameFor(model => model.Events[0].SpotsAvailable)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Events[0].Event.Organizer)
+                @Html.DisplayNameFor(model => model.Events[0].Date)
             </th>
             <th></th>
         </tr>
@@ -38,25 +34,22 @@
 @foreach (var item in Model.Events) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Event.Title)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Event.Description)
+                @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Event.Place)
+                @Html.DisplayFor(modelItem => item.Place)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Event.Address)
+                @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Event.SpotsAvailable)
+                @Html.DisplayFor(modelItem => item.SpotsAvailable)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Event.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Event.Organizer.Name)
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
         </tr>
 }

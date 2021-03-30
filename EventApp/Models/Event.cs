@@ -14,8 +14,7 @@ namespace EventApp.Models
         public string Address { get; set; }
         public int SpotsAvailable { get; set; }
         public DateTime Date { get; set; }
-        public int OrganizerID {get; set;}
-        public Organizer Organizer { get; set; }
-        public List<AttendeeEvent> AttendeeEvent { get; set; }
+        public List<MyUser> MyUsers { get; set; }
+        //public Organizer Organizer { get; set; }
     }
 }
